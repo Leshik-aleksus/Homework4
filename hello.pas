@@ -4,9 +4,11 @@
 }
 begin
   var leng := ReadInteger('Выберите один из 3 предпочитаемых языков: Русский(1), Английский(2), Китайский(3)');
-  if leng = 1 then 
-    Print('Привет')
-  else if leng = 2 then
-    Print('Hello')
-  else Print('嗨');
+  
+  case leng of
+    1: Print('Привет');
+    2: Print('Hello');
+    3: Print('嗨');
+  else Print('Данный язык не поддерживается :(');
+  end;
 end.
